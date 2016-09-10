@@ -1,0 +1,21 @@
+{
+  "name": "neighborhood",
+  "version": "1.0.0",
+  "description": "Neighborhood Map Project",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/achen2401/neighborhoodMapProject.git"
+  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amy Chen",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0"
+  }
+}

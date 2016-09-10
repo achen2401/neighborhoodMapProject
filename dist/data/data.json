@@ -1,0 +1,114 @@
+{
+    "locationTypes": ["park", "point of interest", "museum", "all"],
+    "data": [{
+        "id": "0",
+        "title": "Space Needle",
+        "address": "Seattle, WA 98109, USA",
+        "position": {
+            "lat": 47.620423,
+            "lng": -122.349355
+        },
+        "type": "point of interest",
+        "icon": "images/brown.png"
+    }, {
+        "id": "1",
+        "title": "University of Washington",
+        "address": "Seattle, WA 98105, USA",
+        "position": {
+            "lat": 47.655335,
+            "lng": -122.30352
+        },
+        "type": "point of interest",
+        "icon": "images/brown.png"
+    }, {
+        "id": "2",
+        "title": "Pike Place Market",
+        "address": "Seattle, WA, USA",
+        "position": {
+            "lat": 47.610136,
+            "lng": -122.342057
+        },
+        "type": "point of interest",
+        "icon": "images/brown.png"
+    }, {
+        "id": "3",
+        "title": "CenturyLink Field",
+        "address": "800 Occidental Ave S, Seattle, WA 98134, USA",
+        "position": {
+            "lat": 47.595152,
+            "lng": -122.331639
+        },
+        "type": "point of interest",
+        "icon": "images/brown.png"
+    }, {
+        "id": "4",
+        "title": "Bellevue Arts Museum",
+        "address": "510 Bellevue Way NE, Bellevue, WA 98004, USA",
+        "position": {
+            "lat": 47.61522,
+            "lng": -122.201399
+        },
+        "type": "museum",
+        "icon": "images/pale-bloo.png"
+    }, {
+        "id": "5",
+        "title": "Seattle Art Museum",
+        "address": "1300 1st Ave, Seattle, WA 98101, USA",
+        "position": {
+            "lat": 47.607593,
+            "lng": -122.338669
+        },
+        "type": "museum",
+        "icon": "images/pale-bloo.png"
+    }, {
+        "id": "6",
+        "title": "Alki Beach",
+        "address": "Seattle, WA, USA",
+        "position": {
+            "lat": 47.585916,
+            "lng": -122.401426
+        },
+        "type": "park",
+        "icon": "images/green.png"
+    }, {
+        "id": "7",
+        "title": "Green Lake (Seattle)",
+        "address": "Seattle, WA, USA",
+        "position": {
+            "lat": 47.680984,
+            "lng": -122.327968
+        },
+        "type": "park",
+        "icon": "images/green.png"
+    }, {
+        "id": "8",
+        "title": "Discovery Park (Seattle)",
+        "address": "3801 Discovery Park Blvd, Seattle, WA 98199, USA",
+        "position": {
+            "lat": 47.655597,
+            "lng": -122.410345
+        },
+        "type": "park",
+        "icon": "images/green.png"
+    }, {
+        "id": "9",
+        "title": "Magnuson Park (Seattle)",
+        "address": "7400 Sand Point Way NE, Seattle, WA 98115, USA",
+        "position": {
+            "lat": 47.682353,
+            "lng": -122.256781
+        },
+        "type": "park",
+        "icon": "images/green.png"
+    }, {
+        "id": "10",
+        "title": "Marymoor Park",
+        "address": "6046 West Lake Sammamish Pkwy NE, Redmond, WA 98052, USA",
+        "position": {
+            "lat": 47.665723,
+            "lng": -122.114573
+        },
+        "type": "park",
+        "icon": "images/green.png"
+    }]
+}

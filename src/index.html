@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <meta name="description" content="Neighborhood Map Project">
+        <meta name="author" content="Amy Chen">
+        <title>Neighborhood Map</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div id="close-nav-container">
+                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true" title="click to see location listing" onclick="toggleSideNav()"></span>
+            </div>
+            <div id="brand-container">My Favorite Places in Seattle</div>
+        </header>
+        <main id="main-container">
+            <section id="nav-container">
+                <div class="nav-item input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span>&nbsp;Filter &nbsp;&nbsp;<span class="caret"></span></button>
+                    <div id="location-type-container" data-bind="visible:currentLocationType() !='all', text:currentLocationType"></div>
+                    <ul class="dropdown-menu" data-bind="foreach: locationTypes">
+                      <li><a href="#" data-bind="click:$parent.filterLocationList, text:$data"></a></li>
+                    </ul>
+                </div><!-- /btn-group -->
+                <ul id="location-list" class="nav-item" data-bind="foreach: locationList">
+                    <li data-bind="click:$parent.triggerMarker, text:title"></li>
+                </ul>
+            </section>
+            <section id="map-container">
+                <div id="map"></div>
+            </section>
+        </main>
+        <footer>
+                Data Sources - <a href="https://developers.google.com/maps/documentation/javascript/" target="_blank">Google Map API</a> &amp; <a href="https://www.mediawiki.org/wiki/API:Opensearch">MediaWiki API</a>
+        </footer>
+        <script src="js/knockout.js"></script>
+        <script src="js/main.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaFCyypIGkieFuGuGRp-wGYQFhz4JiE74&callback=initMap" async defer></script>
+    </body>
+</html>
