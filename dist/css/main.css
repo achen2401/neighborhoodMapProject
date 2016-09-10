@@ -122,6 +122,11 @@ font-size:0.9em;
 footer, footer a {
 color: #857E7B;
 }
+.warning {
+color: #98411C;
+font-style: italic;
+opacity: 0.8;
+}
 @media screen and (min-width: 700px) {
     header {
     font-size:1.1em;
