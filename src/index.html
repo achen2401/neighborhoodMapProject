@@ -14,19 +14,19 @@
     <body>
         <header>
             <div id="close-nav-container">
-                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true" title="click to see location listing" onclick="toggleSideNav()"></span>
+                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true" title="click to see location listing" data-bind="click:setNavListState"></span>
             </div>
             <div id="brand-container">My Favorite Places in Seattle</div>
         </header>
         <main id="main-container">
-            <section id="nav-container">
+            <section id="nav-container" data-bind="css: {open: currentNavListState() == 'open'}">
                 <div class="nav-item input-group-btn">
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-filter" aria-hidden="true"></span>&nbsp;Filter &nbsp;&nbsp;<span class="caret"></span></button>
-                    <div id="location-type-container" data-bind="visible:currentLocationType() !='all', text:currentLocationType"></div>
                     <ul class="dropdown-menu" data-bind="foreach: locationTypes">
                       <li><a href="#" data-bind="click:$parent.filterLocationList, text:$data"></a></li>
                     </ul>
                 </div><!-- /btn-group -->
+                <div id="location-type-container" data-bind="visible:currentLocationType() !='all', text:currentLocationType"></div>
                 <ul id="location-list" class="nav-item" data-bind="foreach: locationList">
                     <li data-bind="click:$parent.triggerMarker, text:title"></li>
                 </ul>
@@ -40,6 +40,6 @@
         </footer>
         <script src="js/knockout.js"></script>
         <script src="js/main.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaFCyypIGkieFuGuGRp-wGYQFhz4JiE74&callback=initMap" async defer></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaFCyypIGkieFuGuGRp-wGYQFhz4JiE74&amp;callback=initMap" onerror="handleGoogleMapError()" async defer></script>
     </body>
 </html>
