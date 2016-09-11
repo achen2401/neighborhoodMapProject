@@ -9,7 +9,7 @@ Google Map API was used to create a map of a set of predefined locations in the 
 MediaWiki API to retrieve additional information about each location
 
 ##The site is interactive
-Knockout JS framework is used for this project so that the DOM content of the html is populated using observables in Knockout.  Content of the site is therefore updated dynamically upon occurrence of an event,e.g. clicking on item in the viewList, filtering the viewList.
+Knockout JS framework is used for this project so that the DOM content of the html is populated using observables in Knockout.  Content of the site is therefore updated dynamically upon occurrence of an event, e.g. clicking on item in the viewList, filtering the viewList.
 
 ##The site is responsive
 In additional to some css tricks, Twitter Boostrap CSS is used to help make this site responsive.  When the viewport size hits a certain breaking point (i.e. when the viewport cannot accomodate both the list view and the map), the side list view will disappear.  The hamburger menu icon should appear in the header bar - clicking on it will toggle the side list view.
