@@ -1,5 +1,12 @@
 //initialize map global variables
-var map, bounds, infoWindow, markers = [];
+var map, bounds, infoWindow, markers = [], pageLoaded = false;
+
+/**
+* function to handle page load
+**/
+function handleLoading() {
+   $("#loadingContainer").hide();
+};
 
 /**
  * Location object & array
@@ -28,8 +35,10 @@ function initLocationList() {
         //console.log(data);
         locationList = data.data;
         vm.initList(); //binding location list to view model
+        handleLoading();
     }).fail(function() {
         alert('Error retrieving location data');
+        handleLoading();
     });
 };
 
@@ -162,7 +171,7 @@ var ViewModel = function() {
     self.setNavListState = function() {
         if (self.currentNavListState() == 'open') self.currentNavListState('closed');
         else self.currentNavListState('open');
-    }
+    };
 
     self.setCurrentLocation = function(location) {
         self.currentLocation(location);
@@ -172,3 +181,4 @@ var ViewModel = function() {
 var vm = new ViewModel();
 
 ko.applyBindings(vm);
+
